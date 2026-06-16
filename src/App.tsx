@@ -1,30 +1,20 @@
-import Image from "next/image";
-import { Orbitron } from "next/font/google";
-
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  weight: ["700", "800", "900"],
-});
-
-export default function Home() {
+export default function App() {
   return (
-    <main className="min-h-screen text-white">
+    <main className="min-h-screen text-white bg-black">
       {/* Hero Section */}
       <section className="relative min-h-screen overflow-hidden">
         {/* Ocean Background */}
-        <Image
+        <img
           src="/hero/ocean-bg.png"
           alt="Ocean Background"
-          fill
-          priority
-          className="object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
         />
 
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/35" />
 
         {/* Left Dark Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-black/75 via-black/30 to-transparent" />
 
         {/* Content */}
         <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-8">
@@ -35,7 +25,7 @@ export default function Home() {
                 Explore • Discover • Protect
               </p>
 
-              <h1 className={`${orbitron.className} text-6xl md:text-8xl font-black leading-[0.9] tracking-tight`}>
+              <h1 className="font-[Orbitron] text-6xl md:text-8xl font-black leading-[0.9] tracking-tight">
                 EXPLORING
                 <br />
                 EARTH&apos;S LAST
@@ -75,5 +65,5 @@ export default function Home() {
         </div>
       </section>
     </main>
-  );
+  )
 }
