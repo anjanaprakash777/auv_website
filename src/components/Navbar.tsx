@@ -1,4 +1,9 @@
-export function Navbar() {
+interface NavbarProps {
+  dark?: boolean;
+  absolute?: boolean;
+}
+
+export function Navbar({ dark = false, absolute = false }: NavbarProps) {
   const links = [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
@@ -6,8 +11,13 @@ export function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 p-4 flex justify-center pointer-events-none">
-      <nav className="flex items-center gap-8 rounded-full border border-white/10 bg-black/20 px-6 py-2 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] pointer-events-auto transition-all duration-300 hover:bg-black/30">
+    <header className={`${absolute ? 'absolute' : 'fixed'} top-0 left-0 w-full z-50 p-4 flex justify-center pointer-events-none`}>
+      <nav className={`flex items-center gap-8 rounded-full border border-white/10 px-6 py-2 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] pointer-events-auto transition-all duration-300 ${dark
+          ? "bg-black hover:bg-black"
+          : "bg-black/20 hover:bg-black/30"
+
+        }`}
+      >
         <div className="font-[Orbitron] text-lg font-bold tracking-widest text-white">
           CHINMAYA<span className="text-cyan-400">AUV</span>
         </div>
@@ -20,7 +30,7 @@ export function Navbar() {
             >
               {/* Slide-in white background fill */}
               <span className="absolute inset-0 bg-white scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100" />
-              
+
               <a
                 href={link.href}
                 className="relative z-10 text-xs uppercase tracking-widest transition-colors duration-300 text-slate-200 group-hover:text-black font-semibold"
@@ -34,4 +44,3 @@ export function Navbar() {
     </header>
   );
 }
-

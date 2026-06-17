@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Dhruva() {
+export function Pragna() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-[#031426] font-['Inter']">
       {/* Background Image */}
@@ -24,7 +24,7 @@ export function Dhruva() {
           className="text-[26vw] font-bold tracking-[0.02em] text-white/20 leading-none select-none font-['Antonio'] inline-block uppercase"
           style={{ transform: "scale(1, 1.5)", transformOrigin: "top center" }}
         >
-          DHRUVA 1
+          PRAGNA
         </h1>
       </div>
 
@@ -48,14 +48,7 @@ export function Dhruva() {
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row">
-            <button
-              onClick={() => {
-                window.location.hash = "#dhruva-design";
-              }}
-
-
-              className="rounded bg-white px-8 py-4 text-[13px] font-bold tracking-widest text-[#0b1623] transition-transform hover:scale-105"
-            >
+            <button className="rounded bg-white px-8 py-4 text-[13px] font-bold tracking-widest text-[#0b1623] transition-transform hover:scale-105">
               EXPLORE DESIGN &gt;
             </button>
             <button className="rounded border border-white/20 bg-transparent px-8 py-4 text-[13px] font-bold tracking-widest text-white transition-colors hover:bg-white/10">
@@ -68,8 +61,8 @@ export function Dhruva() {
         <div className="relative z-40 flex h-full items-center justify-center">
           <div className="relative w-[85%] translate-x-[-5%] translate-y-[-3%] -rotate-12 drop-shadow-[0_20px_50px_rgba(77,168,255,0.15)]">
             <img
-              src={`/vehicles/dhruva.png?v=${Date.now()}`}
-              alt="Dhruva AUV"
+              src={`/vehicles/pragna.png?v=${Date.now()}`}
+              alt="Pragna AUV"
               className="w-full object-contain animate-[float_8s_ease-in-out_infinite]"
               style={{
                 filter: "drop-shadow(0 0 40px rgba(255,255,255,0.1))"
@@ -95,7 +88,7 @@ export function Dhruva() {
             <div>
               <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-white/50">Depth Rating</p>
               <div className="flex items-baseline gap-2">
-                <span className="text-[42px] font-bold leading-none text-white md:text-[54px]">300</span>
+                <span className="text-[42px] font-bold leading-none text-white md:text-[54px]">1000</span>
                 <span className="text-[12px] font-bold uppercase tracking-widest text-white/50">Meters</span>
               </div>
             </div>
@@ -112,7 +105,7 @@ export function Dhruva() {
             <div>
               <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-white/50">Endurance</p>
               <div className="flex items-baseline gap-2">
-                <span className="text-[42px] font-bold leading-none text-white md:text-[54px]">4+</span>
+                <span className="text-[42px] font-bold leading-none text-white md:text-[54px]">8+</span>
                 <span className="text-[12px] font-bold uppercase tracking-widest text-white/50">Hours</span>
               </div>
             </div>
@@ -134,7 +127,7 @@ export function Dhruva() {
             <div>
               <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-white/50">Payload</p>
               <div className="flex items-baseline gap-2">
-                <span className="text-[42px] font-bold leading-none text-white md:text-[54px]">1.5</span>
+                <span className="text-[42px] font-bold leading-none text-white md:text-[54px]">5.0</span>
                 <span className="text-[12px] font-bold uppercase tracking-widest text-white/50">KG</span>
               </div>
             </div>
@@ -158,7 +151,7 @@ export function Dhruva() {
             <div>
               <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-white/50">Top Speed</p>
               <div className="flex items-baseline gap-2">
-                <span className="text-[42px] font-bold leading-none text-white md:text-[54px]">3.5</span>
+                <span className="text-[42px] font-bold leading-none text-white md:text-[54px]">4.5</span>
                 <span className="text-[12px] font-bold uppercase tracking-widest text-white/50">Knots</span>
               </div>
             </div>
