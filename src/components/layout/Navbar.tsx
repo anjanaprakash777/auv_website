@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface NavbarProps {
   dark?: boolean;
@@ -7,19 +7,35 @@ interface NavbarProps {
 
 export function Navbar({ dark = false, absolute = false }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
-  const links = [
+  useEffect(() => {
+    const handleScroll = () => {
+      setHidden(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  type NavLink = { label: string; href?: string; dropdown?: { label: string; href: string }[] };
+
+  const links: NavLink[] = [
     { label: "HOME", href: "#home" },
-    { label: "AUVS", href: "#rovers" },
-    { label: "TECHNOLOGY", href: "#technology" },
-    { label: "APPLICATIONS", href: "#applications" },
+    {
+      label: "AUVS",
+      dropdown: [
+        { label: "DHRUVA", href: "#dhruva-design" },
+        { label: "PRAGNA", href: "#pragna-design" },
+      ],
+    },
     { label: "ABOUT US", href: "#about" },
     { label: "CONTACT", href: "#contact" },
   ];
 
   return (
     <header
-      className={`${absolute ? "absolute" : "fixed"} top-0 left-0 w-full z-50 transition-all duration-300`}
+      className={`${absolute ? "absolute" : "fixed"} top-0 left-0 w-full z-50 transition-all duration-500 ${hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"}`}
     >
       <nav
         className={`flex items-center justify-between px-8 lg:px-12 py-4 transition-all duration-300 ${
@@ -57,13 +73,44 @@ export function Navbar({ dark = false, absolute = false }: NavbarProps) {
         {/* Desktop Nav Links */}
         <ul className="hidden lg:flex items-center gap-1">
           {links.map((link) => (
-            <li key={link.label}>
-              <a
-                href={link.href}
-                className="relative px-4 py-2 text-[13px] font-medium tracking-wider text-slate-300 hover:text-white transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-[2px] after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-3/4"
-              >
-                {link.label}
-              </a>
+            <li
+              key={link.label}
+              className="relative"
+              onMouseEnter={() => link.dropdown && setDropdownOpen(true)}
+              onMouseLeave={() => link.dropdown && setDropdownOpen(false)}
+            >
+              {link.dropdown ? (
+                <>
+                  <button
+                    onClick={() => setDropdownOpen((prev) => !prev)}
+                    className="relative px-4 py-2 text-[13px] font-medium tracking-wider text-slate-300 hover:text-white transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-[2px] after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-3/4 flex items-center gap-1"
+                  >
+                    {link.label}
+                    <svg className={`w-3 h-3 transition-transform duration-300 ${dropdownOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                  </button>
+                  <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 w-40 transition-all duration-300 ${dropdownOpen ? "opacity-100 visible pointer-events-auto" : "opacity-0 invisible pointer-events-none"}`}>
+                    <div className="bg-black/95 backdrop-blur-xl border border-white/10 rounded-lg flex flex-col shadow-2xl shadow-black/50">
+                      {link.dropdown.map((sublink) => (
+                        <a
+                          key={sublink.label}
+                          href={sublink.href}
+                          onClick={() => setDropdownOpen(false)}
+                          className="relative px-6 py-4 text-[13px] font-medium tracking-wider text-slate-300 hover:text-white transition-colors duration-300 text-center after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-[2px] after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-3/4"
+                        >
+                          {sublink.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <a
+                  href={link.href}
+                  className="relative px-4 py-2 text-[13px] font-medium tracking-wider text-slate-300 hover:text-white transition-colors duration-300 after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 after:h-[2px] after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-3/4"
+                >
+                  {link.label}
+                </a>
+              )}
             </li>
           ))}
         </ul>
@@ -115,14 +162,35 @@ export function Navbar({ dark = false, absolute = false }: NavbarProps) {
       >
         <div className="bg-black/95 backdrop-blur-xl border-t border-white/10 px-8 py-6 flex flex-col gap-4">
           {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="text-sm font-medium tracking-wider text-slate-300 hover:text-white transition-colors duration-300"
-            >
-              {link.label}
-            </a>
+            <div key={link.label} className="flex flex-col">
+              {link.dropdown ? (
+                <>
+                  <span className="text-sm font-medium tracking-wider text-slate-500 mb-2">
+                    {link.label}
+                  </span>
+                  <div className="flex flex-col gap-3 pl-4 border-l border-white/10">
+                    {link.dropdown.map((sublink) => (
+                      <a
+                        key={sublink.label}
+                        href={sublink.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="text-sm font-medium tracking-wider text-slate-300 hover:text-white transition-colors duration-300"
+                      >
+                        {sublink.label}
+                      </a>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <a
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-sm font-medium tracking-wider text-slate-300 hover:text-white transition-colors duration-300"
+                >
+                  {link.label}
+                </a>
+              )}
+            </div>
           ))}
           <a
             href="#brochure"

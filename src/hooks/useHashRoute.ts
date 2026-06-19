@@ -10,8 +10,10 @@ export function useHashRoute(defaultRoute = "#home") {
   );
 
   useEffect(() => {
-    const handleHashChange = () =>
+    const handleHashChange = () => {
       setRoute(window.location.hash || defaultRoute);
+      window.scrollTo(0, 0);
+    };
 
     window.addEventListener("hashchange", handleHashChange);
 
