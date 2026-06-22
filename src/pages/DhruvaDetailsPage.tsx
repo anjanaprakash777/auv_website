@@ -20,7 +20,7 @@ export function DhruvaDetailsPage() {
                 {/* Background Image */}
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                    style={{ backgroundImage: "url('/hero/ocean-bg.png')" }}
+                    style={{ backgroundImage: "url('/hero/ocean-bg.webp')" }}
                 />
 
                 {/* Deep Ocean Fog overlay */}
@@ -75,7 +75,7 @@ export function DhruvaDetailsPage() {
                     <div className="relative z-40 flex h-full items-center justify-center">
                         <div className="relative w-[85%] translate-x-[-5%] translate-y-[-3%] -rotate-12 drop-shadow-[0_20px_50px_rgba(77,168,255,0.15)]">
                             <img
-                                src={`/vehicles/dhruva.png?v=${Date.now()}`}
+                                src={`/vehicles/dhruva.webp?v=${Date.now()}`}
                                 alt="Dhruva AUV"
                                 className="w-full object-contain animate-[float_8s_ease-in-out_infinite]"
                                 style={{
@@ -197,7 +197,7 @@ export function DhruvaDetailsPage() {
                 {/* Left Image */}
                 <div className="flex justify-center">
                     <img
-                        src="/vehicles/core.png"
+                        src="/vehicles/core.webp"
                         alt="Pressure Hull"
                         className="w-full max-w-[900px] object-contain"
                     />
@@ -327,7 +327,7 @@ export function DhruvaDetailsPage() {
                     {/* Center Image */}
                     <div className="flex justify-center">
                         <img
-                            src="/vehicles/dhruva.png"
+                            src="/vehicles/dhruva.webp"
                             alt="Thruster Layout"
                             className="w-full max-w-[800px]"
                         />
@@ -372,7 +372,7 @@ export function DhruvaDetailsPage() {
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: "url('/hero/underwater-applications.png')",
+                        backgroundImage: "url('/hero/underwater-applications.webp')",
                     }}
                 />
 
@@ -482,7 +482,7 @@ export function DhruvaDetailsPage() {
                     {/* Front View */}
                     <div className="rounded-lg bg-white p-6">
                         <img
-                            src="/vehicles/front-view.png"
+                            src="/vehicles/front-view.webp"
                             alt="Front View"
                             className="h-[500px] w-full scale-150 object-contain"
                         />
@@ -495,7 +495,7 @@ export function DhruvaDetailsPage() {
                     {/* Isometric View */}
                     <div className="rounded-lg bg-white p-6">
                         <img
-                            src="/vehicles/isometric-view.png"
+                            src="/vehicles/isometric-view.webp"
                             alt="Isometric View"
                             className="h-[500px] w-full scale-150 object-contain"
                         />
@@ -508,7 +508,7 @@ export function DhruvaDetailsPage() {
                     {/* Top View */}
                     <div className="rounded-lg bg-white p-6">
                         <img
-                            src="/vehicles/top-view.png"
+                            src="/vehicles/top-view.webp"
                             alt="Top View"
                             className="h-[500px] w-full scale-150 object-contain"
                         />
@@ -528,7 +528,7 @@ export function DhruvaDetailsPage() {
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: "url('/hero/dhruva-bg.png')",
+                        backgroundImage: "url('/hero/dhruva-bg.webp')",
                     }}
                 />
 
@@ -606,7 +606,7 @@ export function DhruvaDetailsPage() {
                     <div className="flex justify-end">
 
                         <img
-                            src="/vehicles/dhruva2.png"
+                            src="/vehicles/dhruva2.webp"
                             alt="Dhruva"
                             className="w-[1200px] object-contain -translate-x-55"
                         />
@@ -624,7 +624,7 @@ export function DhruvaDetailsPage() {
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: "url('/vehicles/final-bg.jpg')",
+                        backgroundImage: "url('/vehicles/final-bg.webp')",
                     }}
                 />
 
@@ -688,7 +688,7 @@ export function DhruvaDetailsPage() {
                     {/* Right Side */}
                     <div className="flex justify-end">
                         <img
-                            src="/vehicles/dhruva2.png"
+                            src="/vehicles/dhruva2.webp"
                             alt="Dhruva"
                             className="w-[1200px] object-contain -translate-x-55"
                         />

@@ -24,7 +24,7 @@ export function PragnaDetailsPage() {
                 {/* Background Image */}
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                    style={{ backgroundImage: "url('/hero/ocean-bg.png')" }}
+                    style={{ backgroundImage: "url('/hero/ocean-bg.webp')" }}
                 />
 
                 {/* Deep Ocean Fog overlay */}
@@ -79,7 +79,7 @@ export function PragnaDetailsPage() {
                     <div className="relative z-40 flex h-full items-center justify-center">
                         <div className="relative w-[85%] translate-x-[-5%] translate-y-[-3%] -rotate-12 drop-shadow-[0_20px_50px_rgba(77,168,255,0.15)]">
                             <img
-                                src={`/vehicles/pragna.png?v=${Date.now()}`}
+                                src={`/vehicles/pragna.webp?v=${Date.now()}`}
                                 alt="Pragna AUV"
                                 className="w-full object-contain animate-[float_8s_ease-in-out_infinite]"
                                 style={{
@@ -201,7 +201,7 @@ export function PragnaDetailsPage() {
                 {/* Left Image */}
                 <div className="flex justify-center">
                     <img
-                        src="/vehicles/pragna-og.png"
+                        src="/vehicles/pragna-og.webp"
                         alt="Pressure Hull"
                         className="w-full max-w-[900px] object-contain"
                     />
@@ -331,7 +331,7 @@ export function PragnaDetailsPage() {
                     {/* Center Image */}
                     <div className="flex justify-center">
                         <img
-                            src="/vehicles/pragna.png"
+                            src="/vehicles/pragna.webp"
                             alt="Thruster Layout"
                             className="w-full max-w-[800px]"
                         />
@@ -376,7 +376,7 @@ export function PragnaDetailsPage() {
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: "url('/hero/underwater-applications.png')",
+                        backgroundImage: "url('/hero/underwater-applications.webp')",
                     }}
                 />
 
@@ -487,7 +487,7 @@ export function PragnaDetailsPage() {
                     {/* Front View */}
                     <div className="rounded-lg bg-white p-6">
                         <img
-                            src="/vehicles/pragna-frontview.png"
+                            src="/vehicles/pragna-frontview.webp"
                             alt="Front View"
                             className="h-[500px] w-full scale-140 object-contain"
                         />
@@ -500,7 +500,7 @@ export function PragnaDetailsPage() {
                     {/* Isometric View */}
                     <div className="rounded-lg bg-white p-6">
                         <img
-                            src="/vehicles/pragna-isometricview.png"
+                            src="/vehicles/pragna-isometricview.webp"
                             alt="Isometric View"
                             className="h-[500px] w-full scale-140 object-contain"
                         />
@@ -513,7 +513,7 @@ export function PragnaDetailsPage() {
                     {/* Side View */}
                     <div className="rounded-lg bg-white p-6">
                         <img
-                            src="/vehicles/pragna-sideview.png"
+                            src="/vehicles/pragna-sideview.webp"
                             alt="Side View"
                             className="h-[500px] w-full scale-150 object-contain"
                         />
@@ -533,7 +533,7 @@ export function PragnaDetailsPage() {
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: "url('/hero/dhruva-bg.png')",
+                        backgroundImage: "url('/hero/dhruva-bg.webp')",
                     }}
                 />
 
@@ -623,7 +623,7 @@ export function PragnaDetailsPage() {
                     <div className="flex justify-end pr-24">
 
                         <img
-                            src="/vehicles/pragna.png"
+                            src="/vehicles/pragna.webp"
                             alt="Dhruva"
                             className="w-full max-w-[1500px] object-contain"
                         />
@@ -641,7 +641,7 @@ export function PragnaDetailsPage() {
                 <div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: "url('/vehicles/final-bg.jpg')",
+                        backgroundImage: "url('/vehicles/final-bg.webp')",
                     }}
                 />
 
@@ -704,7 +704,7 @@ export function PragnaDetailsPage() {
                     {/* Right Side */}
                     <div className="flex justify-end">
                         <img
-                            src="/vehicles/pragna-og.png"
+                            src="/vehicles/pragna-og.webp"
                             alt="Pragna"
                             className="w-[800px] object-contain -translate-x-40"
                         />

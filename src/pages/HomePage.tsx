@@ -3,7 +3,7 @@ export function HomePage() {
     <section className="relative min-h-screen overflow-hidden">
       {/* Ocean Background Image */}
       <img
-        src="/hero/home_bg.png"
+        src="/hero/home_bg.webp"
         alt=""
         className="absolute inset-0 h-full w-full object-cover"
       />
@@ -46,33 +46,14 @@ export function HomePage() {
             Engineered for Stability. Built for Exploration.
           </p>
 
-          {/* CTA Button */}
-          <a
-            href="#rovers"
-            className="mt-10 group inline-flex items-center gap-3 border border-white/40 hover:border-white px-8 py-3.5 text-[13px] font-semibold tracking-[0.2em] text-white transition-all duration-400 hover:bg-white hover:text-black hero-fade-in"
-            style={{ animationDelay: "0.8s" }}
-          >
-            EXPLORE OUR AUVS
-            <svg
-              className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
+
         </div>
 
         {/* Vehicle images — positioned on sides */}
         {/* Pragna - Left */}
         <div className="absolute left-0 bottom-32 w-[250px] sm:w-[300px] lg:w-[380px] pointer-events-none hero-slide-left hidden md:block">
           <img
-            src="/vehicles/pragna.png"
+            src="/vehicles/pragna.webp"
             alt="Pragna 2026 AUV"
             className="w-full object-contain drop-shadow-[0_0_40px_rgba(0,0,0,0.8)]"
           />
@@ -81,7 +62,7 @@ export function HomePage() {
         {/* Dhruva - Right */}
         <div className="absolute right-0 bottom-32 w-[250px] sm:w-[300px] lg:w-[380px] pointer-events-none hero-slide-right hidden md:block">
           <img
-            src="/vehicles/dhruva.png"
+            src="/vehicles/dhruva.webp"
             alt="Dhruva 1 AUV"
             className="w-full object-contain drop-shadow-[0_0_40px_rgba(0,0,0,0.8)]"
           />
