@@ -2,6 +2,7 @@ import { Navbar } from "./components/layout/Navbar";
 import { useHashRoute } from "./hooks/useHashRoute";
 import {
   HomePage,
+  AboutPage,
   DhruvaDetailsPage,
   PragnaDetailsPage,
 } from "./pages";
@@ -17,10 +18,11 @@ export default function App() {
         <DhruvaDetailsPage />
       ) : route === "#pragna-design" ? (
         <PragnaDetailsPage />
+      ) : route === "#about" ? (
+        <AboutPage />
       ) : (
         <HomePage />
       )}
     </main>
   );
 }
-
