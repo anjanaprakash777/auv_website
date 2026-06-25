@@ -60,7 +60,7 @@ export function AboutPage() {
             <img 
               src="/vehicles/auv%20icon.png" 
               alt="AUV Icon" 
-              className="w-full max-w-none lg:max-w-[130%] lg:scale-[1.35] xl:scale-[1.55] lg:translate-x-40 xl:translate-x-60 object-contain drop-shadow-[0_0_25px_rgba(34,211,238,0.3)]"
+              className="w-full max-w-none lg:max-w-[130%] lg:scale-[1.35] xl:scale-[1.55] lg:translate-x-24 xl:translate-x-40 object-contain drop-shadow-[0_0_25px_rgba(34,211,238,0.3)]"
               style={{ transformOrigin: 'center right' }}
             />
           </div>
