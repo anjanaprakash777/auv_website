@@ -33,8 +33,8 @@ export function AboutPage() {
               ABOUT US
             </p>
             <h1
-              className="font-[Orbitron] font-black uppercase leading-[1.15] tracking-tight mb-6 whitespace-nowrap"
-              style={{ fontSize: "clamp(2.8rem, 4.2vw, 4.2rem)" }}
+              className="font-[Orbitron] font-black uppercase leading-[1.15] tracking-tight mb-6"
+              style={{ fontSize: "clamp(1.8rem, 4.2vw, 4.2rem)" }}
             >
               WE DON'T BUILD
               <br />
@@ -248,8 +248,32 @@ export function AboutPage() {
           </div>
         </div>
 
-        {/* Canvas — 8 identical circles perfectly aligned in the asymmetrical layout */}
-        <div className="relative w-full" style={{ height: "700px" }}>
+        {/* Mobile team grid fallback — shown only on small screens */}
+        <div className="block md:hidden px-6 py-8">
+          <div className="flex flex-wrap justify-center gap-8">
+            {[
+              { id: '1', name: 'NAME', role: 'POSITION' },
+              { id: '2', name: 'NAME', role: 'POSITION' },
+              { id: '3', name: 'NAME', role: 'POSITION' },
+              { id: '4', name: 'NAME', role: 'POSITION' },
+              { id: '5', name: 'NAME', role: 'POSITION' },
+              { id: '6', name: 'NAME', role: 'POSITION' },
+              { id: '7', name: 'NAME', role: 'POSITION' },
+              { id: '8', name: 'NAME', role: 'POSITION' },
+            ].map((m) => (
+              <div key={m.id} className="flex flex-col items-center gap-3 w-[40%]">
+                <div className="w-24 h-24 rounded-full border border-cyan-400/40 bg-cyan-400/5" />
+                <div className="text-center">
+                  <p className="text-white font-bold text-sm tracking-wider">{m.name}</p>
+                  <p className="text-cyan-400 text-xs tracking-wider opacity-80">{m.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop SVG canvas — hidden on mobile */}
+        <div className="hidden md:block relative w-full" style={{ height: "700px" }}>
           <svg
             className="absolute inset-0 w-full h-full"
             viewBox="0 0 2200 1050"

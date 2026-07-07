@@ -47,7 +47,7 @@ export function PragnaDetailsPage() {
                 </div>
 
                 {/* Main Grid Container */}
-                <div className="relative z-30 mx-auto grid h-screen max-w-[1600px] grid-cols-[40%_60%] items-center px-10 md:px-[60px]">
+                <div className="relative z-30 mx-auto grid h-screen max-w-[1600px] grid-cols-1 md:grid-cols-[40%_60%] items-center px-6 md:px-[60px]">
 
                     {/* Left Panel */}
                     <div className="flex flex-col justify-center">
@@ -76,7 +76,7 @@ export function PragnaDetailsPage() {
                     </div>
 
                     {/* Right Panel (3D Showcase Image) */}
-                    <div className="relative z-40 flex h-full items-center justify-center">
+                    <div className="relative z-40 hidden md:flex h-full items-center justify-center">
                         <div className="relative w-[85%] translate-x-[-5%] translate-y-[-3%] -rotate-12 drop-shadow-[0_20px_50px_rgba(77,168,255,0.15)]">
                             <img
                                 src={`/vehicles/pragna.webp?v=${Date.now()}`}
@@ -92,7 +92,7 @@ export function PragnaDetailsPage() {
 
                 {/* Bottom Stats Row */}
                 <div className="absolute bottom-[30px] left-1/2 z-40 w-[90%] -translate-x-1/2 border-t border-white/10 pt-6">
-                    <div className="grid grid-cols-4 divide-x divide-white/10">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-white/10">
 
                         {/* Stat 1: Depth */}
                         <div className="flex flex-col items-center justify-center px-4 md:flex-row md:items-start md:justify-start md:gap-4 md:px-8">
@@ -196,7 +196,7 @@ export function PragnaDetailsPage() {
             {/* Transparent Core Section */}
             <section
                 id="pragna-core-section"
-                className="mx-auto grid max-w-[1800px] grid-cols-1 items-center gap-20 px-16 py-24 lg:grid-cols-2"
+                className="mx-auto grid max-w-[1800px] grid-cols-1 items-center gap-12 px-6 md:px-16 py-16 md:py-24 lg:grid-cols-2"
             >
                 {/* Left Image */}
                 <div className="flex justify-center">
@@ -226,7 +226,7 @@ export function PragnaDetailsPage() {
                         underwater environments.
                     </p>
 
-                    <div className="grid grid-cols-4 gap-5">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
 
                         {/* Modular */}
                         <div className="border border-gray-300 p-8">
@@ -305,7 +305,7 @@ export function PragnaDetailsPage() {
                     </h1>
                 </div>
 
-                <div className="relative z-10 mx-auto w-[98vw] grid h-screen grid-cols-[20%_60%_20%] items-center px-4">
+                <div className="relative z-10 mx-auto w-full grid min-h-screen grid-cols-1 lg:grid-cols-[28%_44%_28%] items-center px-6 lg:px-8 gap-8 py-24 lg:py-0">
 
                     {/* Left Content */}
                     <div className="pt-32">
@@ -339,12 +339,12 @@ export function PragnaDetailsPage() {
 
 
                     {/* Right Side */}
-                    <div className="flex flex-col justify-center gap-28 text-white pt-40">
+                    <div className="flex flex-col justify-center gap-10 lg:gap-20 text-white pt-10 lg:pt-40 px-4">
 
                         <div className="text-center">
-                            <div className="mb-4 text-7xl">↕</div>
+                            <div className="mb-4 text-5xl lg:text-7xl">↕</div>
 
-                            <h3 className="text-2xl font-bold">
+                            <h3 className="text-xl lg:text-2xl font-bold">
                                 4 Vertical Thrusters
                             </h3>
 
@@ -354,9 +354,9 @@ export function PragnaDetailsPage() {
                         </div>
 
                         <div className="text-center">
-                            <div className="mb-4 text-7xl">↔</div>
+                            <div className="mb-4 text-5xl lg:text-7xl">↔</div>
 
-                            <h3 className="text-2xl font-bold">
+                            <h3 className="text-xl lg:text-2xl font-bold">
                                 4 Horizontal Thrusters
                             </h3>
 
@@ -389,11 +389,11 @@ export function PragnaDetailsPage() {
                         BUILT FOR THE OCEAN
                     </p>
 
-                    <h2 className="mb-16 text-center font-['Inter'] text-6xl font-black text-white">
+                    <h2 className="mb-10 md:mb-16 text-center font-['Inter'] text-4xl md:text-6xl font-black text-white">
                         Versatile. Reliable. Autonomous.
                     </h2>
 
-                    <div className="grid w-full max-w-7xl grid-cols-4 gap-8">
+                    <div className="grid w-full max-w-7xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
                         <div className="rounded-xl border border-white/20 bg-white/5 p-8 backdrop-blur-sm">
                             <div className="mb-6 flex justify-center">
@@ -460,7 +460,7 @@ export function PragnaDetailsPage() {
             {/* Form Follows Function */}
             <section className="min-h-screen bg-[#f5f5f5] flex items-center">
 
-                <div className="mx-auto grid h-full w-full max-w-[1900px] grid-cols-4 gap-10 px-16">
+                <div className="mx-auto grid h-full w-full max-w-[1900px] grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 px-6 md:px-16 py-12 md:py-0">
 
                     {/* Left Content */}
                     <div className="flex flex-col justify-center">
@@ -539,12 +539,12 @@ export function PragnaDetailsPage() {
 
                 <div className="absolute inset-0 bg-black/75" />
 
-                <div className="relative z-10 grid min-h-screen grid-cols-[50%_60%] items-center px-20">
+                <div className="relative z-10 grid min-h-screen grid-cols-1 lg:grid-cols-[50%_60%] items-center px-6 md:px-20 py-20 lg:py-0">
 
                     {/* Left Side */}
                     <div>
 
-                        <h2 className="mb-16 font-['Inter'] text-7xl font-black leading-[0.95] text-white">
+                        <h2 className="mb-8 md:mb-16 font-['Inter'] text-5xl md:text-7xl font-black leading-[0.95] text-white">
                             TECHNICAL
                             <br />
                             SPECIFICATION
@@ -578,8 +578,8 @@ export function PragnaDetailsPage() {
 
                     </div>
 
-                    {/* Right Side */}
-                    <div className="flex justify-end pr-24">
+                    {/* Right Side — hidden on mobile */}
+                    <div className="hidden lg:flex justify-end pr-24">
 
                         <img
                             src="/vehicles/pragna.webp"
@@ -623,7 +623,7 @@ export function PragnaDetailsPage() {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 grid h-screen grid-cols-[55%_65%] items-center px-20">
+                <div className="relative z-10 grid min-h-screen grid-cols-1 lg:grid-cols-[55%_65%] items-center px-6 md:px-20 py-20 lg:py-0">
 
                     {/* Left Side */}
                     <div>
@@ -631,7 +631,7 @@ export function PragnaDetailsPage() {
                             READY FOR THE NEXT MISSION?
                         </p>
 
-                        <h2 className="mb-8 font-['Inter'] text-7xl font-black leading-tight text-white">
+                        <h2 className="mb-8 font-['Inter'] text-4xl md:text-7xl font-black leading-tight text-white">
                             Explore the Future
                             <br />
                             Beneath the Surface
@@ -660,8 +660,8 @@ export function PragnaDetailsPage() {
                         </div>
                     </div>
 
-                    {/* Right Side */}
-                    <div className="flex justify-end">
+                    {/* Right Side — hidden on mobile */}
+                    <div className="hidden lg:flex justify-end">
                         <img
                             src="/vehicles/pragna-og.webp"
                             alt="Pragna"
