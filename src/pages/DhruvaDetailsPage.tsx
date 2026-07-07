@@ -316,11 +316,11 @@ export function DhruvaDetailsPage() {
                         </h2>
 
                         <ul className="space-y-4 text-white/80">
-                            <li>âœ“ 4 Horizontal Thrusters</li>
-                            <li>âœ“ 4 Vertical Thrusters</li>
-                            <li>âœ“ Full 6DOF Control</li>
-                            <li>âœ“ Stable Hovering</li>
-                            <li>âœ“ Precise Navigation</li>
+                            <li>✓ 4 Horizontal Thrusters</li>
+                            <li>✓ 4 Vertical Thrusters</li>
+                            <li>✓ Full 6DOF Control</li>
+                            <li>✓ Stable Hovering</li>
+                            <li>✓ Precise Navigation</li>
                         </ul>
                     </div>
 
