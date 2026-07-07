@@ -545,59 +545,29 @@ export function DhruvaDetailsPage() {
                             SPECIFICATION
                         </h2>
 
-                        <div className="relative grid grid-cols-2 gap-12 max-w-[600px] text-white">
-                            <div className="absolute left-1/2 top-0 h-[90%] w-px -translate-x-1/2 bg-white/20" />
+                        <div className="relative max-w-[600px] text-white">
+                            {/* Vertical divider */}
+                            <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-white/20" />
 
-                            {/* Column 1 */}
-                            <div className="pr-8">
-
-                                <div className="mb-10 flex justify-between border-b border-white/10 pb-6">
-                                    <span className="text-white/50">Length</span>
-                                    <span>480 mm</span>
+                            {[
+                                { left: { label: 'Length',        value: '480 mm'           }, right: { label: 'Thrusters', value: '8 (4H + 4V)' } },
+                                { left: { label: 'Width',         value: '200 mm'           }, right: { label: 'Endurance', value: '4+ Hours'     } },
+                                { left: { label: 'Height',        value: '210 mm'           }, right: { label: 'Payload',   value: '1.5 kg'       } },
+                                { left: { label: 'Pressure Hull', value: '110 mm Acrylic Tube' }, right: { label: 'Max Depth', value: '300 m'     } },
+                            ].map((row, i) => (
+                                <div key={i} className="grid grid-cols-2 border-b border-white/10 mb-10 pb-6">
+                                    {/* Left spec */}
+                                    <div className="flex justify-between items-start pr-8">
+                                        <span className="text-white/50 whitespace-nowrap">{row.left.label}</span>
+                                        <span className="text-right ml-4">{row.left.value}</span>
+                                    </div>
+                                    {/* Right spec */}
+                                    <div className="flex justify-between items-start pl-8">
+                                        <span className="text-white/50 whitespace-nowrap">{row.right.label}</span>
+                                        <span className="text-right ml-4">{row.right.value}</span>
+                                    </div>
                                 </div>
-
-                                <div className="mb-10 flex justify-between border-b border-white/10 pb-6">
-                                    <span className="text-white/50">Width</span>
-                                    <span>200 mm</span>
-                                </div>
-
-                                <div className="mb-10 flex justify-between border-b border-white/10 pb-6">
-                                    <span className="text-white/50">Height</span>
-                                    <span>210 mm</span>
-                                </div>
-
-                                <div className="mb-10 flex justify-between border-b border-white/10 pb-6">
-                                    <span className="text-white/50">Pressure Hull</span>
-                                    <span>110 mm Acrylic Tube</span>
-                                </div>
-
-                            </div>
-
-                            {/* Column 2 */}
-                            <div className="pl-8">
-
-                                <div className="mb-10 flex justify-between border-b border-white/10 pb-6">
-                                    <span className="text-white/50">Thrusters</span>
-                                    <span>8 (4H + 4V)</span>
-                                </div>
-
-                                <div className="mb-10 flex justify-between border-b border-white/10 pb-6">
-                                    <span className="text-white/50">Endurance</span>
-                                    <span>4+ Hours</span>
-                                </div>
-
-                                <div className="mb-10 flex justify-between border-b border-white/10 pb-6">
-                                    <span className="text-white/50">Payload</span>
-                                    <span>1.5 kg</span>
-                                </div>
-
-                                <div className="mb-10 flex justify-between border-b border-white/10 pb-6">
-                                    <span className="text-white/50">Max Depth</span>
-                                    <span>300 m</span>
-                                </div>
-
-                            </div>
-
+                            ))}
                         </div>
 
                     </div>
