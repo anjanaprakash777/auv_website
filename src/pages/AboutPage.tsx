@@ -10,10 +10,10 @@ export function AboutPage() {
             <defs>
               <pattern id="circuit-bg-hero" width="200" height="150" patternUnits="userSpaceOnUse">
                 {/* Horizontal tracks */}
-                <path d="M0 20 H200 M0 130 H200" stroke="#22d3ee" strokeWidth="0.5" opacity="0.3"/>
+                <path d="M0 20 H200 M0 130 H200" stroke="#22d3ee" strokeWidth="0.5" opacity="0.3" />
                 {/* Angled branches */}
-                <path d="M20 75 L40 20 H60 M120 75 L140 130 H160" stroke="#22d3ee" strokeWidth="0.5" fill="none" opacity="0.5"/>
-                <path d="M80 75 L60 130 H40 M180 75 L160 20 H140" stroke="#22d3ee" strokeWidth="0.5" fill="none" opacity="0.5"/>
+                <path d="M20 75 L40 20 H60 M120 75 L140 130 H160" stroke="#22d3ee" strokeWidth="0.5" fill="none" opacity="0.5" />
+                <path d="M80 75 L60 130 H40 M180 75 L160 20 H140" stroke="#22d3ee" strokeWidth="0.5" fill="none" opacity="0.5" />
                 {/* Nodes */}
                 <circle cx="60" cy="20" r="2" fill="#22d3ee" />
                 <circle cx="160" cy="130" r="2" fill="#22d3ee" />
@@ -54,12 +54,12 @@ export function AboutPage() {
               where humans can't.
             </p>
           </div>
-          
+
           {/* Right Image */}
           <div className="flex justify-center lg:justify-end lg:w-1/2 mt-10 lg:mt-0">
-            <img 
-              src="/vehicles/auv%20icon.png" 
-              alt="AUV Icon" 
+            <img
+              src="/vehicles/auv%20icon.png"
+              alt="AUV Icon"
               className="w-full max-w-none lg:max-w-[130%] lg:scale-[1.35] xl:scale-[1.55] lg:translate-x-24 xl:translate-x-40 object-contain drop-shadow-[0_0_25px_rgba(34,211,238,0.3)]"
               style={{ transformOrigin: 'center right' }}
             />
@@ -69,7 +69,7 @@ export function AboutPage() {
 
       {/* ── Second Section — 71% + WHAT DRIVES US ── */}
       <section className="relative bg-[#070d18] text-white flex flex-col justify-center px-10 sm:px-16 lg:px-20 xl:px-24 py-24 overflow-hidden">
-        
+
         {/* Background Circuit Line with Dots */}
         <div className="absolute top-[20%] left-0 w-full h-[100px] pointer-events-none opacity-[0.2]">
           <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1000 100">
@@ -100,14 +100,14 @@ export function AboutPage() {
             {/* Radar bg */}
             <div className="absolute left-[-5%] top-1/2 -translate-y-1/2 w-[350px] h-[350px] opacity-[0.04] pointer-events-none">
               <svg viewBox="0 0 200 200" fill="none" className="w-full h-full">
-                <circle cx="100" cy="100" r="90" stroke="#22d3ee" strokeWidth="1"/>
-                <circle cx="100" cy="100" r="65" stroke="#22d3ee" strokeWidth="1"/>
-                <circle cx="100" cy="100" r="40" stroke="#22d3ee" strokeWidth="1"/>
-                <circle cx="100" cy="100" r="15" stroke="#22d3ee" strokeWidth="1"/>
-                <line x1="100" y1="10" x2="100" y2="190" stroke="#22d3ee" strokeWidth="0.5"/>
-                <line x1="10" y1="100" x2="190" y2="100" stroke="#22d3ee" strokeWidth="0.5"/>
-                <line x1="36" y1="36" x2="164" y2="164" stroke="#22d3ee" strokeWidth="0.5"/>
-                <line x1="164" y1="36" x2="36" y2="164" stroke="#22d3ee" strokeWidth="0.5"/>
+                <circle cx="100" cy="100" r="90" stroke="#22d3ee" strokeWidth="1" />
+                <circle cx="100" cy="100" r="65" stroke="#22d3ee" strokeWidth="1" />
+                <circle cx="100" cy="100" r="40" stroke="#22d3ee" strokeWidth="1" />
+                <circle cx="100" cy="100" r="15" stroke="#22d3ee" strokeWidth="1" />
+                <line x1="100" y1="10" x2="100" y2="190" stroke="#22d3ee" strokeWidth="0.5" />
+                <line x1="10" y1="100" x2="190" y2="100" stroke="#22d3ee" strokeWidth="0.5" />
+                <line x1="36" y1="36" x2="164" y2="164" stroke="#22d3ee" strokeWidth="0.5" />
+                <line x1="164" y1="36" x2="36" y2="164" stroke="#22d3ee" strokeWidth="0.5" />
               </svg>
             </div>
             <div className="relative">
@@ -157,12 +157,12 @@ export function AboutPage() {
             {
               icon: (
                 <svg viewBox="0 0 60 60" fill="none" className="w-[56px] h-[56px] shrink-0">
-                  <circle cx="30" cy="30" r="28" stroke="#22d3ee" strokeWidth="1.2"/>
-                  <circle cx="30" cy="30" r="18" stroke="#22d3ee" strokeWidth="1.2"/>
-                  <circle cx="30" cy="30" r="8" stroke="#22d3ee" strokeWidth="1.2"/>
-                  <circle cx="30" cy="30" r="2.5" fill="#22d3ee"/>
-                  <line x1="30" y1="2" x2="30" y2="58" stroke="#22d3ee" strokeWidth="0.8"/>
-                  <line x1="2" y1="30" x2="58" y2="30" stroke="#22d3ee" strokeWidth="0.8"/>
+                  <circle cx="30" cy="30" r="28" stroke="#22d3ee" strokeWidth="1.2" />
+                  <circle cx="30" cy="30" r="18" stroke="#22d3ee" strokeWidth="1.2" />
+                  <circle cx="30" cy="30" r="8" stroke="#22d3ee" strokeWidth="1.2" />
+                  <circle cx="30" cy="30" r="2.5" fill="#22d3ee" />
+                  <line x1="30" y1="2" x2="30" y2="58" stroke="#22d3ee" strokeWidth="0.8" />
+                  <line x1="2" y1="30" x2="58" y2="30" stroke="#22d3ee" strokeWidth="0.8" />
                 </svg>
               ),
               title: "EXPLORATION",
@@ -171,15 +171,15 @@ export function AboutPage() {
             {
               icon: (
                 <svg viewBox="0 0 60 60" fill="none" className="w-[56px] h-[56px] shrink-0">
-                  <path d="M30 5 L52 18 L52 42 L30 55 L8 42 L8 18 Z" stroke="#22d3ee" strokeWidth="1.2"/>
-                  <path d="M30 18 L42 24.5 L42 37.5 L30 44 L18 37.5 L18 24.5 Z" stroke="#22d3ee" strokeWidth="1.2"/>
-                  <circle cx="30" cy="30" r="4" stroke="#22d3ee" strokeWidth="1.2"/>
-                  <line x1="30" y1="5" x2="30" y2="18" stroke="#22d3ee" strokeWidth="0.8"/>
-                  <line x1="52" y1="18" x2="42" y2="24.5" stroke="#22d3ee" strokeWidth="0.8"/>
-                  <line x1="52" y1="42" x2="42" y2="37.5" stroke="#22d3ee" strokeWidth="0.8"/>
-                  <line x1="30" y1="55" x2="30" y2="44" stroke="#22d3ee" strokeWidth="0.8"/>
-                  <line x1="8" y1="42" x2="18" y2="37.5" stroke="#22d3ee" strokeWidth="0.8"/>
-                  <line x1="8" y1="18" x2="18" y2="24.5" stroke="#22d3ee" strokeWidth="0.8"/>
+                  <path d="M30 5 L52 18 L52 42 L30 55 L8 42 L8 18 Z" stroke="#22d3ee" strokeWidth="1.2" />
+                  <path d="M30 18 L42 24.5 L42 37.5 L30 44 L18 37.5 L18 24.5 Z" stroke="#22d3ee" strokeWidth="1.2" />
+                  <circle cx="30" cy="30" r="4" stroke="#22d3ee" strokeWidth="1.2" />
+                  <line x1="30" y1="5" x2="30" y2="18" stroke="#22d3ee" strokeWidth="0.8" />
+                  <line x1="52" y1="18" x2="42" y2="24.5" stroke="#22d3ee" strokeWidth="0.8" />
+                  <line x1="52" y1="42" x2="42" y2="37.5" stroke="#22d3ee" strokeWidth="0.8" />
+                  <line x1="30" y1="55" x2="30" y2="44" stroke="#22d3ee" strokeWidth="0.8" />
+                  <line x1="8" y1="42" x2="18" y2="37.5" stroke="#22d3ee" strokeWidth="0.8" />
+                  <line x1="8" y1="18" x2="18" y2="24.5" stroke="#22d3ee" strokeWidth="0.8" />
                 </svg>
               ),
               title: "INNOVATION",
@@ -188,8 +188,8 @@ export function AboutPage() {
             {
               icon: (
                 <svg viewBox="0 0 60 60" fill="none" className="w-[56px] h-[56px] shrink-0">
-                  <path d="M30 5 L52 14 L52 32 C52 43 42 52 30 56 C18 52 8 43 8 32 L8 14 Z" stroke="#22d3ee" strokeWidth="1.2"/>
-                  <path d="M20 30 L27 37 L40 23" stroke="#22d3ee" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M30 5 L52 14 L52 32 C52 43 42 52 30 56 C18 52 8 43 8 32 L8 14 Z" stroke="#22d3ee" strokeWidth="1.2" />
+                  <path d="M20 30 L27 37 L40 23" stroke="#22d3ee" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               ),
               title: "RELIABILITY",
@@ -215,8 +215,100 @@ export function AboutPage() {
 
       </section>
 
+      {/* ── Our Team Section ── */}
+      <section className="relative bg-[#04090f] text-white overflow-hidden">
 
+        {/* Background circuit decoration */}
+        <div className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.12]">
+          <svg width="100%" height="100%">
+            <defs>
+              <pattern id="circuit-team" width="200" height="150" patternUnits="userSpaceOnUse">
+                <path d="M0 20 H200 M0 130 H200" stroke="#22d3ee" strokeWidth="0.5" opacity="0.3" />
+                <path d="M20 75 L40 20 H60 M120 75 L140 130 H160" stroke="#22d3ee" strokeWidth="0.5" fill="none" opacity="0.5" />
+                <path d="M80 75 L60 130 H40 M180 75 L160 20 H140" stroke="#22d3ee" strokeWidth="0.5" fill="none" opacity="0.5" />
+                <circle cx="60" cy="20" r="2" fill="#22d3ee" />
+                <circle cx="160" cy="130" r="2" fill="#22d3ee" />
+                <circle cx="40" cy="130" r="2" fill="#22d3ee" />
+                <circle cx="140" cy="20" r="2" fill="#22d3ee" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#circuit-team)" />
+          </svg>
+        </div>
+
+        {/* Section heading */}
+        <div className="relative z-10 text-center pt-2 pb-0">
+          <h2 className="font-[Orbitron] font-bold text-white uppercase tracking-[0.25em] text-[36px] lg:text-[44px]">
+            OUR TEAM
+          </h2>
+          <div className="flex justify-center mt-3">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+              <path d="M1 1L9 10L17 1" stroke="#22d3ee" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+          </div>
+        </div>
+
+        {/* Canvas — 8 identical circles perfectly aligned in the asymmetrical layout */}
+        <div className="relative w-full" style={{ height: "700px" }}>
+          <svg
+            className="absolute inset-0 w-full h-full"
+            viewBox="0 0 2200 1050"
+            preserveAspectRatio="xMidYMid meet"
+          >
+
+            {[
+              { id: '1', cx: 160,  cy: 160, name: 'NAME', role: 'POSITION' },
+              { id: '2', cx: 980,  cy: 240, name: 'NAME', role: 'POSITION' },
+              { id: '3', cx: 1800, cy: 160, name: 'NAME', role: 'POSITION' },
+              { id: '4', cx: 310,  cy: 470, name: 'NAME', role: 'POSITION' },
+              { id: '5', cx: 1650, cy: 470, name: 'NAME', role: 'POSITION' },
+              { id: '6', cx: 160,  cy: 820, name: 'NAME', role: 'POSITION' },
+              { id: '7', cx: 950,  cy: 740, name: 'NAME', role: 'POSITION' },
+              { id: '8', cx: 1800, cy: 820, name: 'NAME', role: 'POSITION' },
+            ].map((member) => {
+              const startX = member.cx + 78;
+              const startY = member.cy - 78;
+              const endX = member.cx + 206;
+              const endY = member.cy - 111;
+
+              // All paths go to the right with a loop
+              const pathData = `M ${startX} ${startY} c 13 5, 26 7, 38 2 c 15 -7, 17 -22, 5 -31 c -17 -11, -35 1, -27 21 c 7 22, 37 22, 62 7 c 17 -10, 32 -20, 50 -32`;
+
+              return (
+                <g key={member.id}>
+                  {/* Circle Placeholder */}
+                  <circle cx={member.cx} cy={member.cy} r="110" fill="rgba(69,231,255,0.04)" stroke="#45E7FF" strokeOpacity="0.38" strokeWidth="1.2" />
+
+                  {/* Thin Dashed Path */}
+                  <path
+                    d={pathData}
+                    stroke="#45E7FF"
+                    strokeWidth="1.5"
+                    fill="none"
+                    strokeDasharray="6 6"
+                    strokeLinecap="round"
+                  />
+
+
+                  {/* Text positioned at the end of the line */}
+                  <text x={endX + 15} y={endY - 5} fill="white" fontSize="16" fontWeight="bold" textAnchor="start" letterSpacing="1">
+                    {member.name}
+                  </text>
+                  <text x={endX + 15} y={endY + 15} fill="#22d3ee" fontSize="12" textAnchor="start" letterSpacing="1" opacity="0.8">
+                    {member.role}
+                  </text>
+                </g>
+              );
+            })}
+          </svg>
+        </div>
+
+        {/* Bottom padding */}
+        <div className="h-16" />
+
+      </section>
 
     </div>
   );
 }
+
