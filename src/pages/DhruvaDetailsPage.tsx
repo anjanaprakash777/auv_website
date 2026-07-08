@@ -16,7 +16,7 @@ export function DhruvaDetailsPage() {
         <div className="bg-[#f5f5f5] text-black">
 
             {/* ── Dhruva Hero Showcase ── */}
-            <section className="relative min-h-screen w-full overflow-hidden bg-[#031426] font-['Inter']">
+            <section id="dhruva-top" className="relative min-h-screen w-full overflow-hidden bg-[#031426] font-['Inter']">
                 {/* Background Image */}
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -585,86 +585,19 @@ export function DhruvaDetailsPage() {
 
                 </div>
 
-            </section>
-            {/* Final CTA Section */}
-            <section
-                className="relative min-h-screen overflow-hidden bg-black"
-            >
-                {/* Background */}
-                <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{
-                        backgroundImage: "url('/vehicles/final-bg.webp')",
-                    }}
-                />
-
-                {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-black/50" />
-
-                {/* Left Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
-
-                {/* Background Text */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <h1
-                        className="font-['Antonio'] text-[18vw] font-black uppercase whitespace-nowrap text-cyan-400/12"
-                        style={{
-                            transform: "scale(1,1.3)",
-                        }}
+                {/* Back to Top — bottom right pill */}
+                <div className="absolute bottom-8 right-8 z-20">
+                    <button
+                        onClick={() => document.getElementById('dhruva-top')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="group flex items-center gap-3 bg-[#0d1f33] hover:bg-white border border-white/10 hover:border-white rounded-full px-6 py-3 transition-all duration-300 cursor-pointer"
                     >
-                        EXPLORE
-                    </h1>
+                        <span className="text-white/40 group-hover:text-slate-500 text-[11px] font-medium tracking-[0.2em] uppercase transition-colors duration-300">Back to Top</span>
+                        <svg className="w-4 h-4 text-cyan-400 group-hover:text-slate-700 transition-all duration-300 group-hover:-translate-y-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+                        </svg>
+                    </button>
                 </div>
 
-                {/* Content */}
-                <div className="relative z-10 grid min-h-screen grid-cols-1 lg:grid-cols-[55%_65%] items-center px-6 md:px-20 py-20 lg:py-0">
-
-                    {/* Left Side */}
-                    <div>
-                        <p className="mb-6 text-xs uppercase tracking-[0.35em] text-white/50">
-                            READY FOR THE NEXT MISSION?
-                        </p>
-
-                        <h2 className="mb-8 font-['Inter'] text-4xl md:text-7xl font-black leading-tight text-white">
-                            Explore the Future
-                            <br />
-                            Beneath the Surface
-                        </h2>
-
-                        <p className="max-w-xl text-lg leading-relaxed text-white/70">
-                            DHRUVA combines modular engineering,
-                            hydrodynamic efficiency and autonomous
-                            underwater capabilities, making it ideal
-                            for research, inspection and exploration.
-                        </p>
-
-                        <div className="mt-12 flex gap-5">
-
-                            <button
-                                className="rounded-xl bg-white px-8 py-4 font-semibold text-black transition hover:bg-gray-200"
-                            >
-                                Download Brochure
-                            </button>
-
-                            <button
-                                className="rounded-xl border border-white/20 px-8 py-4 text-white transition hover:bg-white/10"
-                            >
-                                Contact Team
-                            </button>
-
-                        </div>
-                    </div>
-
-                    {/* Right Side — hidden on mobile */}
-                    <div className="hidden lg:flex justify-end">
-                        <img
-                            src="/vehicles/dhruva2.webp"
-                            alt="Dhruva"
-                            className="w-[1200px] object-contain -translate-x-55"
-                        />
-                    </div>
-
-                </div>
             </section>
 
 

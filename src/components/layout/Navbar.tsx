@@ -38,7 +38,7 @@ export function Navbar({ dark = false, absolute = false }: NavbarProps) {
       className={`${absolute ? "absolute" : "fixed"} top-0 left-0 w-full z-50 transition-all duration-500 ${hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"}`}
     >
       <nav
-        className={`flex items-center justify-between px-8 lg:px-12 py-4 transition-all duration-300 ${
+        className={`grid grid-cols-3 items-center px-8 lg:px-12 py-4 transition-all duration-300 ${
           dark ? "bg-black/90 backdrop-blur-md" : "bg-transparent"
         }`}
       >
@@ -71,7 +71,7 @@ export function Navbar({ dark = false, absolute = false }: NavbarProps) {
         </a>
 
         {/* Desktop Nav Links */}
-        <ul className="hidden lg:flex items-center gap-1">
+        <ul className="hidden lg:flex items-center justify-center gap-1">
           {links.map((link) => (
             <li
               key={link.label}
@@ -115,26 +115,10 @@ export function Navbar({ dark = false, absolute = false }: NavbarProps) {
           ))}
         </ul>
 
-        {/* Download Brochure Button */}
-        <a
-          href="#brochure"
-          className="hidden lg:flex items-center gap-2 border border-white/30 hover:border-white px-5 py-2.5 text-[12px] font-semibold tracking-wider text-white transition-all duration-300 hover:bg-white hover:text-black group"
-        >
-          DOWNLOAD BROCHURE
-          <svg
-            className="w-4 h-4 transition-transform duration-300 group-hover:translate-y-0.5"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <polyline points="7 10 12 15 17 10" />
-            <line x1="12" y1="15" x2="12" y2="3" />
-          </svg>
-        </a>
+
+
+        {/* Spacer — third column (desktop only) */}
+        <div className="hidden lg:block" />
 
         {/* Mobile Menu Button */}
         <button
@@ -192,25 +176,7 @@ export function Navbar({ dark = false, absolute = false }: NavbarProps) {
               )}
             </div>
           ))}
-          <a
-            href="#brochure"
-            className="mt-2 inline-flex items-center gap-2 border border-white/30 px-5 py-2.5 text-xs font-semibold tracking-wider text-white w-fit"
-          >
-            DOWNLOAD BROCHURE
-            <svg
-              className="w-4 h-4"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-          </a>
+
         </div>
       </div>
     </header>
